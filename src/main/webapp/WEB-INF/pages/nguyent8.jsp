@@ -13,7 +13,7 @@
      * generating the whole page since this is a HEAD request only. You
      * can employ more sophisticated health checks in your application.
      */
-    if (request.getMethodasdfasdfasdfasdfasdfzsfasdfsafdasdfasdfasd().equals("HEAD")) return;
+    if (request.getMethod().equals("HEAD")) return;
 %>
 
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Bespoke Suits for Dogs</a>
+        <a class="navbar-brand" href="#">Bespoke Suits for Tien Anh Nguyen</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
@@ -47,12 +47,12 @@
   </nav>
   <% if (!((String) request.getAttribute("deploymentGroupName")).contains("Production")) { %>
     <div class="alert alert-info" role="alert">
-      <p><strong>AWS CodeDeploy ApplicationGentilm5Gentilm5Gentilm5Gentilm5Gentilm5:</strong> ${applicationName}</p>
+      <p><strong>AWS CodeDeploy Application:</strong> ${applicationName}</p>
       <p><strong>AWS CodeDeploy Deployment Group:</strong> ${deploymentGroupName}</p>
       <strong>Amazon EC2 Instances associated with this fleet:</strong>
       <ul>
         <% for (final String instance : (List<String>) request.getAttribute("instanceIds")) { %>
-          <% if (((Map<String, Stringasdfasdfasdf>) request.getAttribute("instanceStates")).containsKey(instance)) { %>
+          <% if (((Map<String, String>) request.getAttribute("instanceStates")).containsKey(instance)) { %>
             <li> <%= instance %> - Instance Health: <%= ((Map<String, String>) request.getAttribute("instanceStates")).get(instance) %></li>
           <% } else { %>
             <li> <%= instance %> - Instance Health: Unknown</li>
