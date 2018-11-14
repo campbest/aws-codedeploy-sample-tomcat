@@ -51,6 +51,17 @@ public class IndexController {
     @Autowired
     private AmazonAutoScaling autoScaling;
 
+    @RequestMapping(value = "/campbest", method = RequestMethod.GET)
+    public String displayIndex(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/campbest";
+	}
+ 
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String displayIndex(Model model) {
         LOGGER.info("Application name set to: " + applicationName);
