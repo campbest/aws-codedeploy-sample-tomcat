@@ -27,6 +27,7 @@
     <link rel='stylesheet' href='css/theme.css'>
 </head>
 <body role="document">
+<h1>Mitch Myers - CSE470g</h1>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -47,7 +48,7 @@
   </nav>
   <% if (!((String) request.getAttribute("deploymentGroupName")).contains("Production")) { %>
     <div class="alert alert-info" role="alert">
-      <p><strong>AWS CodeDeploy ApplicationGentilm5Gentilm5Gentilm5Gentilm5Gentilm5:</strong> ${applicationName}</p>
+      <p><strong>AWS CodeDeploy Application:</strong> ${applicationName}</p>
       <p><strong>AWS CodeDeploy Deployment Group:</strong> ${deploymentGroupName}</p>
       <strong>Amazon EC2 Instances associated with this fleet:</strong>
       <ul>
