@@ -69,6 +69,15 @@ public class IndexController {
     		model.addAttribute("instanceIds", Collections.<String>emptyList());
     		return "/baackebg";
 	}
+    @RequestMapping(value = "/brownlr4", method = RequestMethod.GET)
+    public String displaybrownlr4(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/brownlr4";
+	}
     @RequestMapping(value = "/gentilm5", method = RequestMethod.GET)
     public String displaygentilm5(Model model) {
         LOGGER.info("Application name set to: " + applicationName);
@@ -115,14 +124,14 @@ public class IndexController {
     		model.addAttribute("instanceIds", Collections.<String>emptyList());
     		return "/nguyenq2";
 	}
-    @RequestMapping(value = "/postonj2", method = RequestMethod.GET)
+    @RequestMapping(value = "/postonjw", method = RequestMethod.GET)
     public String displaypostonj2(Model model) {
         LOGGER.info("Application name set to: " + applicationName);
         model.addAttribute("applicationName", applicationName);
         LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
         model.addAttribute("deploymentGroupName", deploymentGroupName);
     		model.addAttribute("instanceIds", Collections.<String>emptyList());
-    		return "/postonj2";
+    		return "/postonjw";
 	}
     @RequestMapping(value = "/schmidcc", method = RequestMethod.GET)
     public String displayschmidcc(Model model) {
