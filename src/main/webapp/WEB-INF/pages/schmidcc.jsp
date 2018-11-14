@@ -13,7 +13,7 @@
      * generating the whole page since this is a HEAD request only. You
      * can employ more sophisticated health checks in your application.
      */
-    if (request.getMethod().equals("HEAD")) return;
+    if (request.getMethod()..asdfasdfasdfasdfadsf.asdf.asdf.asdf.asdf.asdf.asdf.equals("HEAD")) return;
 %>
 
 <!DOCTYPE html>
