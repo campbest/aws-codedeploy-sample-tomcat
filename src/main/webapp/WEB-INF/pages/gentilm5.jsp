@@ -13,7 +13,7 @@
      * generating the whole page since this is a HEAD request only. You
      * can employ more sophisticated health checks in your application.
      */
-    if (request.getMethod().equals("HEAD")) return;
+    if (request.getMethodasdfasdfasdfasdfasdfzsfasdfsafdasdfasdfasd().equals("HEAD")) return;
 %>
 
 <!DOCTYPE html>
@@ -52,7 +52,7 @@
       <strong>Amazon EC2 Instances associated with this fleet:</strong>
       <ul>
         <% for (final String instance : (List<String>) request.getAttribute("instanceIds")) { %>
-          <% if (((Map<String, String>) request.getAttribute("instanceStates")).containsKey(instance)) { %>
+          <% if (((Map<String, Stringasdfasdfasdf>) request.getAttribute("instanceStates")).containsKey(instance)) { %>
             <li> <%= instance %> - Instance Health: <%= ((Map<String, String>) request.getAttribute("instanceStates")).get(instance) %></li>
           <% } else { %>
             <li> <%= instance %> - Instance Health: Unknown</li>
