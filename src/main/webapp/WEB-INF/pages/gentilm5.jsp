@@ -27,7 +27,6 @@
     <link rel='stylesheet' href='css/theme.css'>
 </head>
 <body role="document">
-<h1>Scott Campbell - CSE470g</h1>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
