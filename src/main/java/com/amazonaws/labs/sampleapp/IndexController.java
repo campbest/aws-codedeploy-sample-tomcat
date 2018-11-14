@@ -52,7 +52,7 @@ public class IndexController {
     private AmazonAutoScaling autoScaling;
 
     @RequestMapping(value = "/campbest", method = RequestMethod.GET)
-    public String displayIndex(Model model) {
+    public String displayCampbest(Model model) {
         LOGGER.info("Application name set to: " + applicationName);
         model.addAttribute("applicationName", applicationName);
         LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
