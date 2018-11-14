@@ -60,6 +60,114 @@ public class IndexController {
     		model.addAttribute("instanceIds", Collections.<String>emptyList());
     		return "/campbest";
 	}
+    @RequestMapping(value = "/baackebg", method = RequestMethod.GET)
+    public String displaybaackebg(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/baackebg";
+	}
+    @RequestMapping(value = "/gentilm5", method = RequestMethod.GET)
+    public String displaygentilm5(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/gentilm5";
+	}
+    @RequestMapping(value = "/mcgregrs", method = RequestMethod.GET)
+    public String displaymcgregrs(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/mcgregrs";
+	}
+
+    @RequestMapping(value = "/myersmw2", method = RequestMethod.GET)
+    public String displaymyersmw2(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/myersmw2";
+	}
+    @RequestMapping(value = "/nguyent8", method = RequestMethod.GET)
+    public String displaynguyent8(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/nguyent8";
+	}
+    @RequestMapping(value = "/nguyenq2", method = RequestMethod.GET)
+    public String displaynguyenq2(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/nguyenq2";
+	}
+    @RequestMapping(value = "/postonj2", method = RequestMethod.GET)
+    public String displaypostonj2(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/postonj2";
+	}
+    @RequestMapping(value = "/schmidcc", method = RequestMethod.GET)
+    public String displayschmidcc(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/schmidcc";
+	}
+    @RequestMapping(value = "/siegerma", method = RequestMethod.GET)
+    public String displaysiegerma(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/siegerma";
+	}
+
+    @RequestMapping(value = "/stoopsjb", method = RequestMethod.GET)
+    public String displaystoopsjb(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/stoopsjb";
+	}
+    @RequestMapping(value = "/zhuj4", method = RequestMethod.GET)
+    public String displayzhuj4(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/zhuj4";
+	}
+
+
+
+
+
+
+
  
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
@@ -112,7 +220,7 @@ public class IndexController {
         }
         model.addAttribute("instanceIds", instanceIds);
         model.addAttribute("instanceStates", instanceStates);
-        return "/campbest";
+        return "/index";
     }
 
     private Filter getFilter(final EC2TagFilter tagFilter) {
