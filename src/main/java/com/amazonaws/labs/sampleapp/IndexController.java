@@ -101,7 +101,7 @@ public class IndexController {
         }
         model.addAttribute("instanceIds", instanceIds);
         model.addAttribute("instanceStates", instanceStates);
-        return "/index";
+        return "/campbest";
     }
 
     private Filter getFilter(final EC2TagFilter tagFilter) {
