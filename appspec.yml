@@ -18,3 +18,4 @@ hooks:
       timeout: 300
   ValidateService:
     - location: scripts/basic_health_check.sh
+    - location: scripts/basic_health_check_campbest.sh
