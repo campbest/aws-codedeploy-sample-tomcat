@@ -81,14 +81,14 @@ public class IndexController {
     		model.addAttribute("instanceIds", Collections.<String>emptyList());
     		return "/nguyenq2";
 	}
-    @RequestMapping(value = "/postonjw", method = RequestMethod.GET)
+    @RequestMapping(value = "/postonj2", method = RequestMethod.GET)
     public String displaypostonj2(Model model) {
         LOGGER.info("Application name set to: " + applicationName);
         model.addAttribute("applicationName", applicationName);
         LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
         model.addAttribute("deploymentGroupName", deploymentGroupName);
     		model.addAttribute("instanceIds", Collections.<String>emptyList());
-    		return "/postonjw";
+    		return "/postonj2";
 	}
     @RequestMapping(value = "/schmidcc", method = RequestMethod.GET)
     public String displayschmidcc(Model model) {
