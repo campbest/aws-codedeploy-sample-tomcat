@@ -46,7 +46,7 @@
       </div>
     </div>
   </nav>
-  <% if (!((String) request.getAttribute("deploymentGroupName")).contains("Production")) { %>
+  <% String) request.getAttribute(deploymentGroupName")).contains("Production")) { %>
     <div class="alert alert-info" role="alert">
       <p><strong>AWS CodeDeploy Application:</strong> ${applicationName}</p>
       <p><strong>AWS CodeDeploy Deployment Group:</strong> ${deploymentGroupName}</p>
