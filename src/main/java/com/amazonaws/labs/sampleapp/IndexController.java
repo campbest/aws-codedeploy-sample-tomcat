@@ -1,43 +1,10 @@
 package com.amazonaws.labs.sampleapp;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Logger;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.amazonaws.services.autoscaling.AmazonAutoScaling;
-import com.amazonaws.services.autoscaling.model.DescribeAutoScalingGroupsRequest;
-import com.amazonaws.services.autoscaling.model.DescribeAutoScalingGroupsResult;
-import com.amazonaws.services.codedeploy.AmazonCodeDeploy;
-import com.amazonaws.services.codedeploy.model.AutoScalingGroup;
-import com.amazonaws.services.codedeploy.model.EC2TagFilter;
-import com.amazonaws.services.codedeploy.model.GetDeploymentGroupRequest;
-import com.amazonaws.services.codedeploy.model.GetDeploymentGroupResult;
-import com.amazonaws.services.ec2.AmazonEC2;
-import com.amazonaws.services.ec2.model.DescribeInstanceStatusRequest;
-import com.amazonaws.services.ec2.model.DescribeInstanceStatusResult;
-import com.amazonaws.services.ec2.model.DescribeInstancesRequest;
-import com.amazonaws.services.ec2.model.DescribeInstancesResult;
-import com.amazonaws.services.ec2.model.Filter;
-import com.amazonaws.services.ec2.model.Instance;
-import com.amazonaws.services.ec2.model.InstanceStatus;
-import com.amazonaws.services.ec2.model.Reservation;
-
 @Controller
 public class IndexController {
     private final static Logger LOGGER = Logger.getLogger(IndexController.class.getName());
 
     @Value("${APPLICATION_NAME}")
-    private String applicationName;
 
     @Value("${DEPLOYMENT_GROUP_NAME}")
     private String deploymentGroupName;
@@ -46,7 +13,6 @@ public class IndexController {
     private AmazonCodeDeploy codeDeploy;
 
     @Autowired
-    private AmazonEC2 ec2;
 
     @Autowired
     private AmazonAutoScaling autoScaling;
@@ -68,6 +34,15 @@ public class IndexController {
         model.addAttribute("deploymentGroupName", deploymentGroupName);
     		model.addAttribute("instanceIds", Collections.<String>emptyList());
     		return "/baackebg";
+	}
+    @RequestMapping(value = "/brownlr4", method = RequestMethod.GET)
+    public String displaybrownlr4(Model model) {
+        LOGGER.info("Application name set to: " + applicationName);
+        model.addAttribute("applicationName", applicationName);
+        LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
+        model.addAttribute("deploymentGroupName", deploymentGroupName);
+    		model.addAttribute("instanceIds", Collections.<String>emptyList());
+    		return "/brownlr4";
 	}
     @RequestMapping(value = "/gentilm5", method = RequestMethod.GET)
     public String displaygentilm5(Model model) {
@@ -115,14 +90,14 @@ public class IndexController {
     		model.addAttribute("instanceIds", Collections.<String>emptyList());
     		return "/nguyenq2";
 	}
-    @RequestMapping(value = "/postonj2", method = RequestMethod.GET)
+    @RequestMapping(value = "/postonjw", method = RequestMethod.GET)
     public String displaypostonj2(Model model) {
         LOGGER.info("Application name set to: " + applicationName);
         model.addAttribute("applicationName", applicationName);
         LOGGER.info("Deployment Group Name set to: " + deploymentGroupName);
         model.addAttribute("deploymentGroupName", deploymentGroupName);
     		model.addAttribute("instanceIds", Collections.<String>emptyList());
-    		return "/postonj2";
+    		return "/postonjw";
 	}
     @RequestMapping(value = "/schmidcc", method = RequestMethod.GET)
     public String displayschmidcc(Model model) {
